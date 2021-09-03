@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка | KazMetalTrade</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon32.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon16.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <a class="sidebar__logo">
+            <img src="../img/logo.png" alt="KazMetalTrade" class="sidebar__logo_img logo_opacity">
+            <i class='bx bx-menu' id="btn"></i>
+        </a>
+        <ul class="sidebar__nav">
+            <li class="sidebar__item">
+                <a href="./panel.html" class="sidebar__link">
+                    <i class='bx bx-home'></i>
+                    <span class="sidebar__name">Главная</span>
+                </a>
+                <span class="sidebar__tooltip">Главная</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./clients.html" class="sidebar__link">
+                    <i class='bx bx-group'></i>
+                    <span class="sidebar__name">Клиенты</span>
+                </a>
+                <span class="sidebar__tooltip">Клиенты</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./request.html" class="sidebar__link">
+                    <i class='bx bx-notepad'></i>
+                    <span class="sidebar__name">Заявки</span>
+                </a>
+                <span class="sidebar__tooltip">Заявки</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./users.html" class="sidebar__link">
+                    <i class='bx bx-user'></i>
+                    <span class="sidebar__name">Пользователи</span>
+                </a>
+                <span class="sidebar__tooltip">Пользователи</span>
+            </li>
+            <li class="sidebar__item profile">
+                <a href="./cabinet.html" class="profile__details">
+                    <img src="../img/user.png" alt="Фото" class="profile__photo">
+                    <div class="profile__job">
+                        <span class="profile__user">Ким Олег</span>
+                        <span class="profile__rank">Администратор</span>
+                    </div>
+                </a>
+                <a href="./login.html"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <section class="application">
+            <div class="panel_container">
+                <div class="application__wrapper">
+                    <div class="application__top">
+                        <img src="../img/logo.png" alt="KazMetalTrade" class="application__logo">
+                        <h2 class="application__company">Товарищество с ограниченной ответственностью "KazMetalTrade" БИН 140140017174</h2>
+                        <div class="application__address">
+                            Республика Казахстан, город Алматы, Турксибский район, <br>
+                            индекс 050054, пр. Суюнбая, д. 152Г, тел.: 377-23-79, <br>
+                            kazmetaltrade@gmail.com
+                        </div>
+                    </div>
+                    <div class="application__content">
+                        <div class="application__head">
+                            Город: <span class="application__city">Нур-Султан, Петропавловск</span><br>
+                            Проект: <span class="application__project">АРЭК, ТЭЦ-2</span>
+                        </div>
+                        <div class="application__head">
+                            Директору ТОО "KazMetalTrade" <br>
+                            Билялову А.М. <br>
+                            от <span class="application__rank">Регионального менеджера</span><br>
+                            ТОО "KazMetalTrade"<br>
+                            <span class="application__name">Ким Андрей Клименьтьевич</span>
+                        </div>
+                    </div>
+                    <div class="application__body">
+                        <h3 class="application__title">Заявка</h3>
+                        <p class="application__text">Прошу Вас выделить денежные средства на дорогу Павлодар-Нур-Султан-Петропавловск, в размере
+                            20.000 (двадцать тысяч) тенге. На дорогу Кикпаеву Ж.М. - Петропавловск-Нур-Султан-Семей, 20.000 (двадцать тысяч) тенге.
+                        </p>
+                    </div>
+                    <div class="application__publication">
+                        <p class="application__date">Дата: <span>01-09-2021</span>г.</p>
+                        <p class="application__date">Запрошено в: <span>01-09-2021 13:50</span></p>
+                        <p class="application__date">Одобрено в: <span>01-09-2021 13:50</span></p>
+                        <img src="../img/signature/signature2.png" alt="Подпись" class="application__signature">
+                    </div>
+                    
+                    <button class="application__printer" onclick="javascript:window.print();">
+                        <i class='bx bx-printer'></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidebar -->
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>

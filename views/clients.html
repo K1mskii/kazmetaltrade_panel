@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты | KazMetalTrade</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon32.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon16.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a class="sidebar__logo">
+            <img src="../img/logo.png" alt="KazMetalTrade" class="sidebar__logo_img logo_opacity">
+            <i class='bx bx-menu' id="btn"></i>
+        </a>
+        <ul class="sidebar__nav">
+            <li class="sidebar__item">
+                <a href="./panel.html" class="sidebar__link">
+                    <i class='bx bx-home'></i>
+                    <span class="sidebar__name">Главная</span>
+                </a>
+                <span class="sidebar__tooltip">Главная</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./clients.html" class="sidebar__link">
+                    <i class='bx bx-group'></i>
+                    <span class="sidebar__name">Клиенты</span>
+                </a>
+                <span class="sidebar__tooltip">Клиенты</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./request.html" class="sidebar__link">
+                    <i class='bx bx-notepad'></i>
+                    <span class="sidebar__name">Заявки</span>
+                </a>
+                <span class="sidebar__tooltip">Заявки</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./users.html" class="sidebar__link">
+                    <i class='bx bx-user'></i>
+                    <span class="sidebar__name">Пользователи</span>
+                </a>
+                <span class="sidebar__tooltip">Пользователи</span>
+            </li>
+            <li class="sidebar__item profile">
+                <a href="./cabinet.html" class="profile__details">
+                    <img src="../img/user.png" alt="Фото" class="profile__photo">
+                    <div class="profile__job">
+                        <span class="profile__user">Ким Олег</span>
+                        <span class="profile__rank">Администратор</span>
+                    </div>
+                </a>
+                <a href="./login.html"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <section class="panel">
+            <div class="panel_container">
+                <div class="panel__wrapper">
+                    <div class="panel__head">
+                        <h2 class="panel__title">Клиенты</h2>
+                        <form action="#" class="panel__form">
+                            <i class='bx bx-search'></i>
+                            <input type="search" class="panel__input" placeholder="Искать...">
+                            <input type="submit" class="panel__submit" value="Найти">
+                        </form>
+                        <button class="panel__btn" data-modal-btn="add_clients">
+                            <i class='bx bx-plus'></i>
+                            <span class="panel__btn-title">+ Новый клиент</span>
+                        </button>
+                    </div>
+                    <div class="table__body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ФИО</th>
+                                    <th>Дата рождения</th>
+                                    <th>Телефон</th>
+                                    <th>Адрес проживания</th>
+                                    <th width="100px">Настройки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ким Олег Эдуардович</td>
+                                    <td>27.02.1999</td>
+                                    <td>+77052225652</td>
+                                    <td>Пушкина 38</td>
+                                    <td>
+                                        <button data-modal-btn="edit_clients"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_clients"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <div class="pagination__wrapper">
+                            <ul class="pagination__list">
+                                <li><a href="#" class="pagination__link">Начало</a></li>
+                                <li><a href="#" class="pagination__link pagination__link--active">1</a></li>
+                                <li><a href="#" class="pagination__link">2</a></li>
+                                <li><a href="#" class="pagination__link">3</a></li>
+                                <li><a href="#" class="pagination__link">4</a></li>
+                                <li><a href="#" class="pagination__link">5</a></li>
+                                <li><a href="#" class="pagination__link">Конец</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal add -->
+        <div class="modal" data-modal-window="add_clients">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Добавить клиента</h2>
+                    <input type="text" name="clients_add_name" class="modal__input" placeholder="ФИО*" required>
+                    <input type="text" name="clients_add_date" class="modal__input" placeholder="Дата рождения*" required onfocus="(this.type='date')">
+                    <input type="tel" name="clients_add_phone" class="modal__input"  placeholder="Номер телефона*" required>
+                    <input type="text" name="clients_add_date" class="modal__input" placeholder="Адрес проживания*" required>
+                    <input type="submit" name="clients_add_submit" class="modal__submit" value="Добавить">
+                </form>
+            </div>
+        </div>
+        <!-- Modal delete-->
+        <div class="modal" data-modal-window="delete_clients">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Вы точно хотите удалить?</h2>
+                    <input type="submit" name="clients_delete_submit" class="modal__submit" value="Удалить">
+                </form>
+            </div>
+        </div>
+        <!-- Modal edit -->
+        <div class="modal" data-modal-window="edit_clients">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Редактировать клиента</h2>
+                    <input type="text" name="clients_edit_name" class="modal__input" placeholder="ФИО*" required>
+                    <input type="text" name="clients_edit_date" class="modal__input" placeholder="Дата рождения*" required onfocus="(this.type='date')">
+                    <input type="tel" name="clients_edit_phone" class="modal__input"  placeholder="Номер телефона*" required>
+                    <input type="text" name="clients_edit_date" class="modal__input" placeholder="Адрес проживания*" required>
+                    <input type="submit" name="clients_edit_submit" class="modal__submit" value="Изменить">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar -->
+    <script src="../js/sidebar.js"></script>
+    <!-- Input Mask -->
+    <script src="../libs/mask/inputmask.min.js"></script>
+    <script src="../js/inputMask.js"></script>
+    <!-- Modal window -->
+    <script src="../js/modal.js"></script>
+</body>
+</html>

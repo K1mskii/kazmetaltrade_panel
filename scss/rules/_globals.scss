@@ -1,0 +1,16 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+    width: 100%;
+}
+
+.panel_container {
+    padding: 20px 50px;
+} 
+
+@media screen and (max-width: 600px) {
+    .panel_container {
+        padding: 20px 25px;
+    } 
+};

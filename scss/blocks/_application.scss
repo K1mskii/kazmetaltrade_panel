@@ -1,0 +1,139 @@
+.application {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.application__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.application__top {
+    max-width: 1240px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.application__logo {
+    margin-bottom: 30px;
+    width: 250px;
+    height: 100px;
+}
+.application__company {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $dark;
+    @include m-regular;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: $dark;
+}
+.application__address {
+    margin-top: 10px;
+    @include m-regular;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    color: $dark;
+}
+
+.application__content {
+    width: 100%; 
+    max-width: 780px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.application__head {
+    @include m-regular;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    color: $dark;
+}
+.application__head:nth-child(1) {
+    margin-right: 10px;
+}
+
+.application__city, .application__project {
+    text-decoration: underline;
+}
+
+.application__body {
+    max-width: 1240px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.application__title {
+    @include m-bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: $dark;
+}
+
+.application__text {
+    width: 100%; 
+    max-width: 780px;
+    margin-top: 20px;
+    @include m-regular;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 140%;
+    color: $dark;
+}
+
+.application__publication {
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.application__date {
+    @include m-regular;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: $dark;
+}
+
+.application__signature {
+    width: 200px;
+    height: 150px;
+}
+
+.application__printer {
+    margin-right: auto;
+    background: none;
+}
+
+.application__printer i {
+    font-size: 100px;
+    color: $dark;
+}
+
+@media screen and (max-width: 720px) {
+    .application__company, .application__address, .application__head, .application__text, .application__date {
+        font-size: 15px;
+    }
+    .application__title {
+        font-size: 16px;
+    }
+};
+
+@media print {
+    .sidebar, .application__printer {
+        display: none;
+    }
+    @page { size: auto;  margin: 0mm; }
+}

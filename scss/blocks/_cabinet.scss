@@ -1,0 +1,171 @@
+.cabinet__wrapper {
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 8px;
+}
+
+.cabinet__title {
+    @include m-bold;
+    font-size: 20px;
+    color: $dark;
+    letter-spacing: .5px;
+}
+
+.cabinet__content{
+    margin-top: 50px;
+}
+
+.cabinet__submit {
+    width: 200px;
+    padding: 15px;
+    background-color: $dark;
+    border: none;
+    @include m-bold;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+        background-color: #6f6f6f;
+        color: $dark;
+        transition: all 0.3s ease 0;
+    }
+}
+
+.cabinet__group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.cabinet__input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid $dark;
+}
+
+
+
+/* LABEL ======================================= */
+.cabinet__label {
+    @include m-regular;
+    font-size: 15px;
+    letter-spacing: .5px;
+    color: $dark;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.cabinet__input:focus~.cabinet__label,
+.cabinet__input:valid~.cabinet__label {
+    top: -20px;
+    @include m-regular;
+    font-size: 15px;
+    letter-spacing: .5px;
+    color: $dark;
+}
+
+/* BOTTOM BARS ================================= */
+.cabinet__bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.cabinet__bar:before,
+.cabinet__bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background-color: $dark;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.cabinet__bar:before {
+    left: 50%;
+}
+
+.cabinet__bar:after {
+    right: 50%;
+}
+
+/* active state */
+.cabinet__input:focus~.cabinet__bar:before,
+.cabinet__input:focus~.cabinet__bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.cabinet__highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+.cabinet__input:focus~.cabinet__highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background-color: $dark;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background-color: $dark;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background-color: $dark;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cabinet__input, .cabinet__bar {
+        width: 100%;
+    }
+    .cabinet__label {
+        font-size: 13px;
+    }
+};

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки | KazMetalTrade</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon32.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon16.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a class="sidebar__logo">
+            <img src="../img/logo.png" alt="KazMetalTrade" class="sidebar__logo_img logo_opacity">
+            <i class='bx bx-menu' id="btn"></i>
+        </a>
+        <ul class="sidebar__nav">
+            <li class="sidebar__item">
+                <a href="./panel.html" class="sidebar__link">
+                    <i class='bx bx-home'></i>
+                    <span class="sidebar__name">Главная</span>
+                </a>
+                <span class="sidebar__tooltip">Главная</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./clients.html" class="sidebar__link">
+                    <i class='bx bx-group'></i>
+                    <span class="sidebar__name">Клиенты</span>
+                </a>
+                <span class="sidebar__tooltip">Клиенты</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./request.html" class="sidebar__link">
+                    <i class='bx bx-notepad'></i>
+                    <span class="sidebar__name">Заявки</span>
+                </a>
+                <span class="sidebar__tooltip">Заявки</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./users.html" class="sidebar__link">
+                    <i class='bx bx-user'></i>
+                    <span class="sidebar__name">Пользователи</span>
+                </a>
+                <span class="sidebar__tooltip">Пользователи</span>
+            </li>
+            <li class="sidebar__item profile">
+                <a href="./cabinet.html" class="profile__details">
+                    <img src="../img/user.png" alt="Фото" class="profile__photo">
+                    <div class="profile__job">
+                        <span class="profile__user">Ким Олег</span>
+                        <span class="profile__rank">Администратор</span>
+                    </div>
+                </a>
+                <a href="./login.html"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <section class="panel">
+            <div class="panel_container">
+                <div class="panel__wrapper">
+                    <div class="panel__head">
+                        <h2 class="panel__title">Заявки</h2>
+                        <form action="#" class="panel__form">
+                            <i class='bx bx-search'></i>
+                            <input type="search" class="panel__input" placeholder="Искать...">
+                            <input type="submit" class="panel__submit" value="Найти">
+                        </form>
+                        <button class="panel__btn" data-modal-btn="add_request">
+                            <i class='bx bx-plus'></i>
+                            <span class="panel__btn-title">+ Новая заявка</span>
+                        </button>
+                    </div>
+                    <div class="table__body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Тема</th>
+                                    <th>Исполнитель</th>
+                                    <th>Запрошен в</th>
+                                    <th>Кем одобрено/отказано</th>
+                                    <th>Одобрено/Отказано в</th>
+                                    <th>Причина отказа</th>
+                                    <th>Статус</th>
+                                    <th width="100px">Настройки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="./application.html">Заявка на денежные средства</a></td>
+                                    <td>Иванов Иван Иванович</td>
+                                    <td>31-08-2021 15:23</td>
+                                    <td>---</td>
+                                    <td>---</td>
+                                    <td>---</td>
+                                    <td class="new">Новый</td>
+                                    <td>
+                                        <button data-modal-btn="edit_request"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_request"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./application.html">Заявка на денежные средства</a></td>
+                                    <td>Иванов Иван Иванович</td>
+                                    <td>31-08-2021 15:23</td>
+                                    <td>Билялов Адиль Максутович</td>
+                                    <td>31-08-2021 16:00</td>
+                                    <td>---</td>
+                                    <td class="completed">Одобрено</td>
+                                    <td>
+                                        <button data-modal-btn="edit_request"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_request"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./application.html">Заявка на денежные средства</a></td>
+                                    <td>Иванов Иван Иванович</td>
+                                    <td>31-08-2021 15:23</td>
+                                    <td>Билялов Адиль Максутович</td>
+                                    <td>31-08-2021 16:00</td>
+                                    <td>Слишком много просите</td>
+                                    <td class="denied">Отказано</td>
+                                    <td>
+                                        <button data-modal-btn="edit_request"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_request"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <div class="pagination__wrapper">
+                            <ul class="pagination__list">
+                                <li><a href="#" class="pagination__link">Начало</a></li>
+                                <li><a href="#" class="pagination__link pagination__link--active">1</a></li>
+                                <li><a href="#" class="pagination__link">2</a></li>
+                                <li><a href="#" class="pagination__link">3</a></li>
+                                <li><a href="#" class="pagination__link">4</a></li>
+                                <li><a href="#" class="pagination__link">5</a></li>
+                                <li><a href="#" class="pagination__link">Конец</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal add-->
+        <div class="modal" data-modal-window="add_request">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Создать заявку</h2>
+                    <input type="text" name="request_add_name" class="modal__input" placeholder="От кого*" required>
+                    <input type="text" name="request_add_city" class="modal__input" placeholder="Город*" required>
+                    <input type="text" name="request_add_project" class="modal__input" placeholder="Проект*" required>
+                    <input type="text" name="request_add_subject" class="modal__input" placeholder="Тема заявки*" required>
+                    <textarea name="request_add_text" cols="30" rows="10" class="modal__textarea" required placeholder="Текст заявки*"></textarea>
+                    <input type="submit" name="request_add_submit" class="modal__submit" value="Создать">
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal delete-->
+        <div class="modal" data-modal-window="delete_request">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Удалить заявку?</h2>
+                    <input type="submit" name="request_delete_submit" class="modal__submit" value="Удалить">
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal edit -->
+        <div class="modal" data-modal-window="edit_request">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Редактировать заявку</h2>
+                    <input type="text" name="request_edit_subject" class="modal__input" placeholder="Тема заявки" required>
+                    <select id="selectbox" name="request_edit_status" class="modal__select">
+                        <option data-separator="true">Выберите статус</option>
+                        <option value="1">Новый</option>
+                        <option value="2">Одобрено</option>
+                        <option value="2">Отказано</option>
+                    </select>
+                    <input type="text" name="request_edit_denied" class="modal__input" placeholder="В случае отказа - причина">
+                    <input type="submit" name="request_edit_submit" class="modal__submit" value="Изменить">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar -->
+    <script src="../js/sidebar.js"></script>
+    <!-- Input Mask -->
+    <script src="../libs/mask/inputmask.min.js"></script>
+    <script src="../js/inputMask.js"></script>
+    <!-- Modal window -->
+    <script src="../js/modal.js"></script>
+    <!-- Select custom -->
+    <script src="../libs/select/bvselect.js"></script>
+    <script src="../js/select.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import 'rules/reset';
+@import 'rules/fonts';
+@import 'rules/globals';
+@import 'rules/vars';
+
+@import '../libs/select/bvselect';
+
+// Dashboard
+@import 'blocks/modal';
+@import 'blocks/sidebar';
+@import 'blocks/panel';
+@import 'blocks/login';
+@import 'blocks/cabinet';
+@import 'blocks/news';
+@import 'blocks/pagination';
+@import 'blocks/application';

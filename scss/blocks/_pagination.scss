@@ -1,0 +1,28 @@
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.pagination__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pagination__list li {
+    margin: 15px 1px;
+}
+.pagination__link {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid $dark;
+    @include m-regular;
+    font-size: 15px;
+    color: $dark;
+}
+.pagination__link--active {
+    background-color: $dark;
+    color: $white;
+}

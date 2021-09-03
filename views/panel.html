@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель сотрудника | KazMetalTrade</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon32.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon16.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <a class="sidebar__logo">
+            <img src="../img/logo.png" alt="KazMetalTrade" class="sidebar__logo_img logo_opacity">
+            <i class='bx bx-menu' id="btn"></i>
+        </a>
+        <ul class="sidebar__nav">
+            <li class="sidebar__item">
+                <a href="./panel.html" class="sidebar__link">
+                    <i class='bx bx-home'></i>
+                    <span class="sidebar__name">Главная</span>
+                </a>
+                <span class="sidebar__tooltip">Главная</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./clients.html" class="sidebar__link">
+                    <i class='bx bx-group'></i>
+                    <span class="sidebar__name">Клиенты</span>
+                </a>
+                <span class="sidebar__tooltip">Клиенты</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./request.html" class="sidebar__link">
+                    <i class='bx bx-notepad'></i>
+                    <span class="sidebar__name">Заявки</span>
+                </a>
+                <span class="sidebar__tooltip">Заявки</span>
+            </li>
+            <li class="sidebar__item">
+                <a href="./users.html" class="sidebar__link">
+                    <i class='bx bx-user'></i>
+                    <span class="sidebar__name">Пользователи</span>
+                </a>
+                <span class="sidebar__tooltip">Пользователи</span>
+            </li>
+            <li class="sidebar__item profile">
+                <a href="./cabinet.html" class="profile__details">
+                    <img src="../img/user.png" alt="Фото" class="profile__photo">
+                    <div class="profile__job">
+                        <span class="profile__user">Ким Олег</span>
+                        <span class="profile__rank">Администратор</span>
+                    </div>
+                </a>
+                <a href="./login.html"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <section class="panel">
+            <div class="panel_container">
+                <div class="panel__wrapper">
+                    <div class="weather">
+                        <div id="ml_8adc592d">
+                            <div style="padding:0;margin:0;" id="ml_8adc592d_i" v='1.1'
+                                a='{"t":"g7bs","lang":"ru","ids":[],"a_br_c":"#232323","a_bg":"#232323","a_c":"#FFFFFF","a_c_c":"white"}'>
+                            </div>
+                            <div id="ml_8adc592d_c" style="padding:0;margin:0;padding:7px 5px;">
+                                <a href="https://meteolabs.kz/погода_алматы/" target="_blank" id="ml_8adc592d_u">Погода
+                                    в Алматы</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel__head">
+                        <h2 class="panel__title">Доска объявлений</h2>
+                        <button class="panel__btn" data-modal-btn="add_news">
+                            <i class='bx bx-plus'></i>
+                            <span class="panel__btn-title">+ Добавить объявление</span>
+                        </button>
+                    </div>
+                    <div class="table__body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th width="200px">Дата создания</th>
+                                    <th>Тема объявления</th>
+                                    <th width="100px">Настройки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29-08-2021 12:50</td>
+                                    <td><a href="./news.html">30.08.2021 - выходной день (праздник)</a></td>
+                                    <td>
+                                        <button data-modal-btn="edit_news"><i class='bx bx-edit'></i></button>
+                                        <button data-modal-btn="delete_news"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal add -->
+        <div class="modal" data-modal-window="add_news">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Добавить объявление</h2>
+                    <input type="text" name="news_add_subject" class="modal__input" placeholder="Тема объявления*"
+                        required>
+                    <textarea name="news_add_text" cols="30" rows="10" class="modal__textarea" required
+                        placeholder="Текст объявления*"></textarea>
+                    <input type="file" name="news_add_file" class="modal__file">
+                    <input type="submit" name="news_add_submit" class="modal__submit" value="Добавить">
+                </form>
+            </div>
+        </div>
+        <!-- Modal delete-->
+        <div class="modal" data-modal-window="delete_news">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Вы точно хотите удалить?</h2>
+                    <input type="submit" name="news_delete_submit" class="modal__submit" value="Удалить">
+                </form>
+            </div>
+        </div>
+        <!-- Modal edit -->
+        <div class="modal" data-modal-window="edit_news">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <img src="../img/icons/close.svg" alt="Закрыть" class="modal__icon">
+                </div>
+                <form action="#" method="POST" class="modal__form">
+                    <h2 class="modal__title">Редактировать объявление</h2>
+                    <input type="text" name="news_edit_subject" class="modal__input" placeholder="Тема объявления*"
+                        required>
+                    <textarea name="news_edit_text cols=" 30" rows="10" class="modal__textarea" required
+                        placeholder="Текст объявления*"></textarea>
+                    <input type="file" name="news_edit_file" class="modal__file">
+                    <input type="submit" name="news_edit_submit" class="modal__submit" value="Изменить">
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Sidebar -->
+    <script src="../js/sidebar.js"></script>
+    <!-- Input Mask -->
+    <script src="../libs/mask/inputmask.min.js"></script>
+    <script src="../js/inputMask.js"></script>
+    <!-- Modal window -->
+    <script src="../js/modal.js"></script>
+    <!-- Weather -->
+    <script async src="https://app.meteolabs.kz/js/?id=ml_8adc592d"></script>
+</body>
+
+</html>
